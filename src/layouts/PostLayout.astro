@@ -1,0 +1,49 @@
+---
+import MainLayout from "./MainLayout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
+const { frontmatter } = Astro.props;
+
+// Calcular tiempo de lectura
+const content = await Astro.slots.render("default");
+const words = content
+  .replace(/<[^>]*>/g, "")
+  .split(/\s+/)
+  .filter((w) => w.length > 0).length;
+const readingTime = Math.ceil(words / 200);
+---
+
+<MainLayout>
+  <div slot="header">
+    <Navigation />
+  </div>
+
+  <main style="max-width:760px;margin:48px auto; padding:20px;">
+    <article class="post-article">
+      <header class="post-header">
+        {frontmatter?.title && <h1 class="post-title">{frontmatter.title}</h1>}
+
+        <div class="post-meta">
+          {
+            frontmatter?.pubDate && (
+              <>
+                <span class="muted">{frontmatter.pubDate}</span>
+                <span class="muted">·</span>
+              </>
+            )
+          }
+          <span class="muted">{readingTime} min de lectura</span>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <slot />
+      </div>
+    </article>
+
+    <div style="margin-top:36px">
+      <Footer />
+    </div>
+  </main>
+</MainLayout>
