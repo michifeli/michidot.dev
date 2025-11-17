@@ -12,49 +12,35 @@ import Footer from "../components/Footer.astro";
   <main style="max-width:900px;margin:36px auto; padding:20px;">
     <h1>Proyectos</h1>
     <p class="muted">
-      Listado detallado de proyectos — más información y enlaces.
+      Bienvenido a mis sección de proyectos aqui encontraras una lista mas
+      detalladas de los trabajos que he realizado, si tienes alguna pregunta o
+      deseas contactarme, no dudes en hacerlo.
     </p>
 
     <section style="margin-top:28px">
       <article class="card" style="margin-bottom:16px">
-        <h2>Proyecto A — Nombre</h2>
+        <div
+          class="card-media"
+          style="height:140px;border-radius:8px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;margin-bottom:12px"
+        >
+          <!-- placeholder: replace with screenshot img -->
+          <span class="muted" style="font-size:0.95rem">site</span>
+        </div>
+        <h2>web lyoss usm</h2>
         <p class="muted">
-          Descripción más extensa del proyecto A, qué problema resuelve,
-          tecnologías: Astro, TypeScript, Tailwind.
+          El sitio web de la iniciativa Lyoss USM, una comunidad dedicada a
+          promover Linux y a realizar proyectos open source para el bien común
+          en la universidad. Construida colaborativamente con otros miembros de
+          la comunidad, utilizando tecnologías modernas para ofrecer una
+          experiencia atractiva y funcional.
         </p>
-        <div class="tech-tags" style="margin-top:10px">
+        <div class="tech-tags" style="margin-top:12px">
           <span class="tech-tag">Astro</span>
-          <span class="tech-tag">TypeScript</span>
-          <span class="tech-tag">Tailwind</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
         </div>
-        <div class="project-links" style="margin-top:12px">
-          <a href="#">Demo</a>
-          <a href="#" class="gh-link"
-            ><svg
-              class="gh-icon"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              ><path
-                fill="currentColor"
-                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-              ></path></svg
-            >GitHub</a
-          >
-        </div>
-      </article>
 
-      <article class="card">
-        <h2>Proyecto B — Nombre</h2>
-        <p class="muted">
-          Descripción más extensa del proyecto B, enfoques y resultados.
-        </p>
-        <div class="tech-tags" style="margin-top:10px">
-          <span class="tech-tag">Node</span>
-          <span class="tech-tag">Express</span>
-        </div>
         <div class="project-links" style="margin-top:12px">
-          <a href="#">Demo</a>
           <a href="#" class="gh-link"
             ><svg
               class="gh-icon"
@@ -65,16 +51,34 @@ import Footer from "../components/Footer.astro";
                 fill="currentColor"
                 d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"
               ></path></svg
-            >GitHub</a
+            >Source Code</a
           >
+          <a href="#" class="web-link">
+            <svg
+              class="web-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-2.95-.49-5.28-2.82-5.77-5.77H11v5.77zM11 11H5.23c.49-2.95 2.82-5.28 5.77-5.77V11zM13 11v-5.77c2.95.49 5.28 2.82 5.77 5.77H13zm0 2h5.77c-.49 2.95-2.82 5.28-5.77 5.77V13z"
+                fill="currentColor"></path>
+            </svg>
+            <span>Web</span>
+          </a>
         </div>
       </article>
     </section>
 
     <p style="margin-top:24px" class="muted">
-      Volver a <a href="/">inicio</a>.
+      Vuelve a el <a href="/">inicio</a>.
     </p>
-  </main>
 
-  <Footer />
+    <div style="margin-top:36px">
+      <Footer />
+    </div>
+  </main>
 </MainLayout>

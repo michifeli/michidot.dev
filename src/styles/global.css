@@ -100,14 +100,48 @@ h2{ font-size:1.25rem; color: #e6eef8; font-weight:600 }
 .gh-link:hover{ color:var(--accent); background: rgba(255,255,255,0.02) }
 .gh-icon{ width:16px; height:16px; display:inline-block }
 
+/* Web button: match visual style with GitHub button */
+.web-link{ display:inline-flex; gap:8px; align-items:center; padding:8px 12px; border-radius:8px; background: rgba(255,255,255,0.01); color:var(--muted); border:1px solid rgba(255,255,255,0.03); text-decoration:none }
+.web-link:hover{ color:var(--accent); background: rgba(255,255,255,0.02) }
+.web-icon{ width:16px; height:16px; display:inline-block }
+
+/* spacing: keep consistent gap between source and web buttons */
+.project-links > .web-link { margin-left: 12px }
+
 /* Experience timeline small tweak */
 .experience-item{ display:flex; gap:16px; align-items:flex-start }
 .experience-year{ width:90px; color:var(--muted); font-size:0.9rem }
 
 /* Footer */
-footer{ padding:28px 20px; color:var(--muted) }
-.socials{ display:flex; gap:12px; align-items:center; justify-content:center; margin-top:8px }
+footer{ color:var(--muted); }
+.footer-inner{ max-width:900px; margin:0 auto; padding: 0px 20px; display:flex; flex-direction:column; gap:12px; align-items:center }
+.footer-socials{ display:flex; gap:12px; align-items:center; width:100%; justify-content:center; flex-wrap:wrap; flex-direction:column }
+.footer-title{ color:var(--muted); margin:0; text-align:center; font-weight:600 }
+.footer-icons{ display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap }
+.footer-icon{ display:inline-flex; gap:8px; align-items:center; justify-content:center; padding:8px 12px; border-radius:999px; background: rgba(255,255,255,0.02); color:var(--muted); text-decoration:none; border:1px solid rgba(255,255,255,0.03); font-size:0.95rem }
+.footer-icon .label{ margin-left:4px }
+.footer-icon:hover{ background: rgba(255,255,255,0.06); color:var(--accent) }
+.footer-mail{ color:var(--muted); font-size:0.98rem; display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap }
+.footer-mail a{ color:var(--accent); text-decoration:underline }
+.footer-support{ margin-top:6px }
+.support-btn{ display:inline-flex; align-items:center; gap:10px; padding:10px 20px; border-radius:999px; background: rgba(255,255,255,0.02); color:var(--accent); text-decoration:none; border:1px solid rgba(255,255,255,0.04); font-weight:600 }
+.support-btn:hover{ background: rgba(247,99,191,0.08); color:#fff }
+.footer-license{ color:var(--muted); font-size:0.9rem; text-align:center; margin-top:4px }
 .icon{ width:18px; height:18px; display:inline-block; vertical-align:middle; fill:currentColor }
+
+/* Copy feedback */
+.copy-btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:999px; background: rgba(255,255,255,0.02); color:var(--muted); text-decoration:none; border:1px solid rgba(255,255,255,0.04); cursor:pointer; font-size:0.95rem }
+.copy-btn svg{ display:block }
+.copy-btn:hover{ background: rgba(255,255,255,0.06); color:var(--accent) }
+
+.copy-feedback{ display:none }
+.copy-feedback.show{ display:inline-flex; padding:6px 10px; border-radius:999px; background:var(--accent); color:#fff; font-weight:600; align-items:center }
+
+/* Quote styling */
+.footer-quote{ width:100%; text-align:center; color:var(--muted); }
+.footer-quote blockquote{ margin:0 auto; max-width:760px; font-style:italic; color:var(--muted); opacity:0.95 }
+.footer-quote cite{ display:block; margin-top:6px; font-style:normal; color:var(--muted); opacity:0.9 }
+.footer-quote small{ display:block; margin-top:4px; color:var(--muted); font-size:0.9rem }
 
 /* Small utilities */
 .btn{ background:transparent; border:1px solid rgba(255,255,255,0.04); padding:8px 12px; border-radius:8px; color:inherit }

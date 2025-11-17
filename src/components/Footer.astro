@@ -3,34 +3,123 @@
 ---
 
 <footer>
-  <div
-    style="max-width:1100px;margin:0 auto;padding:28px 20px;color:var(--muted)"
-  >
-    <div
-      style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"
-    >
-      <div>Hecho con ❤️ — <span class="muted">Minimal & Dark</span></div>
-      <div style="display:flex;gap:12px;align-items:center">
-        <a href="mailto:michidot@proton.me" class="muted"
-          >📧 michidot@proton.me</a
-        >
-        <a href="https://github.com/" target="_blank" aria-label="GitHub"
-          >🐙 GitHub</a
-        >
-        <a href="https://twitter.com/" target="_blank" aria-label="Twitter"
-          >𝕏 Twitter</a
-        >
+  <div class="footer-inner">
+    <div class="footer-quote">
+      <blockquote>
+        "I do open source because it's fun and it works."
+        <br />
+        <cite>"Hago open source porque es divertido y funciona."</cite>
+        <br />
+        <small>-- Keynote de Linus Torvalds en LinuxCon Europe 2013.</small>
+      </blockquote>
+    </div>
+
+    <div class="footer-socials">
+      <div class="footer-title">Encuéntrame en</div>
+      <div class="footer-icons">
         <a
+          class="footer-icon"
+          href="https://github.com/"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            ><path
+              fill="currentColor"
+              d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+            ></path></svg
+          >
+          <span class="label">GitHub</span>
+        </a>
+
+        <a
+          class="footer-icon"
           href="https://www.linkedin.com/"
           target="_blank"
-          aria-label="LinkedIn">💼 LinkedIn</a
+          aria-label="LinkedIn"
         >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            ><path
+              fill="currentColor"
+              d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"
+            ></path></svg
+          >
+          <span class="label">LinkedIn</span>
+        </a>
       </div>
     </div>
-    <div
-      style="margin-top:12px;text-align:center;color:var(--muted);font-size:0.9rem"
-    >
-      MIT Open Source © 2025 • Mitchel Rojas
+
+    <div class="footer-mail">
+      O envíame un correo a:
+      <a href="mailto:michidot@proton.me" id="footer-email"
+        >michidot@proton.me</a
+      >
+      <button
+        type="button"
+        class="copy-btn"
+        data-email="michidot@proton.me"
+        aria-label="Copiar correo"
+        title="Copiar correo"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          width="16"
+          height="16"
+          fill="currentColor"
+          aria-hidden="true"
+          ><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1z"></path><path
+            d="M20 5H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"
+          ></path></svg
+        >
+      </button>
+      <span class="copy-feedback" aria-live="polite">Copiado!</span>
     </div>
+
+    <div class="footer-support">
+      <a
+        class="support-btn"
+        href="https://www.buymeacoffee.com/"
+        target="_blank"
+        rel="noopener">☕ Apóyame en Buy Me a Coffee</a
+      >
+    </div>
+
+    <div class="footer-license">MIT * Open Source - Mitchel Rojas © 2025</div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    const btn = document.querySelector(".copy-btn");
+    const feedback = document.querySelector(".copy-feedback");
+    if (!btn) return;
+    btn.addEventListener("click", async (e) => {
+      const email = btn.getAttribute("data-email") || "michidot@proton.me";
+      try {
+        await navigator.clipboard.writeText(email);
+        if (feedback) {
+          feedback.classList.add("show");
+          setTimeout(() => {
+            feedback.classList.remove("show");
+          }, 1600);
+        }
+        const prev = btn.innerHTML;
+        btn.innerHTML =
+          '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M9 16.2 4.8 12l1.4-1.4L9 13.4l9.8-9.8L20.2 4z"/></svg>';
+        setTimeout(() => {
+          btn.innerHTML = prev;
+        }, 1400);
+      } catch (err) {
+        console.error("Clipboard error", err);
+      }
+    });
+  })();
+</script>
