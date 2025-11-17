@@ -7,6 +7,12 @@
 	--card: #0f1720;
 	--glass: rgba(255,255,255,0.02);
 	--header-h: 52px;
+
+	/* per-tech colors */
+	--color-astro: #ffffff; /* Astro brand white */
+	--color-css: #1572B6; /* CSS blue */
+	--color-js: #F7DF1E; /* JS yellow */
+	--color-shell: #ffffff; /* Bash/terminal white */
 }
 
 *{box-sizing:border-box}
@@ -94,7 +100,14 @@ h2{ font-size:1.25rem; color: #e6eef8; font-weight:600 }
 
 /* Project tech tags and links */
 .tech-tags{ display:flex; gap:8px; flex-wrap:wrap }
-.tech-tag{ background: rgba(255,255,255,0.02); color:var(--muted); padding:6px 10px; border-radius:999px; font-size:0.85rem; border:1px solid rgba(255,255,255,0.02) }
+.tech-tag{ background: rgba(255,255,255,0.02); color:var(--muted); padding:6px 10px; border-radius:999px; font-size:0.85rem; border:1px solid rgba(255,255,255,0.02); display:inline-flex; align-items:center; gap:8px }
+.tech-icon{ width:16px; height:16px; display:inline-block; flex:0 0 16px; fill:currentColor }
+
+/* Color only the SVG icon (keep text muted). Use per-tech class on the wrapper span. */
+.tech-tag.astro .tech-icon { color: var(--color-astro) }
+.tech-tag.css .tech-icon { color: var(--color-css) }
+.tech-tag.js .tech-icon { color: var(--color-js) }
+.tech-tag.shell .tech-icon { color: var(--color-shell) }
 .project-links{ margin-top:8px }
 .gh-link{ display:inline-flex; gap:8px; align-items:center; padding:8px 12px; border-radius:8px; background: rgba(255,255,255,0.01); color:var(--muted); border:1px solid rgba(255,255,255,0.03); text-decoration:none }
 .gh-link:hover{ color:var(--accent); background: rgba(255,255,255,0.02) }
